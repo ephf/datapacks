@@ -1,0 +1,1 @@
+item entity @s container.0 replace item_frame{ThinIce:1,CustomModelData:1001,display:{Name:'{"text":"Thin Ice","italic":false}',Lore:['{"text":"from: Thin Ice Datapack","color":"dark_gray"}']},EntityTag:{Invisible:1,Invulnerable:1,Fixed:1,Tags:['thinice']}}

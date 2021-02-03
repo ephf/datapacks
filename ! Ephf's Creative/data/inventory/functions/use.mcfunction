@@ -1,0 +1,1 @@
+execute if entity @s[tag=page0] run function inventory:page0/thinice
