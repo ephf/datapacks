@@ -1,0 +1,23 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "hurt": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "dealt": {
+                        "min": 0,
+                        "max": 20
+                    },
+                    "taken": {
+                        "min": 0,
+                        "max": 20
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "main:player_hurt"
+    }
+}

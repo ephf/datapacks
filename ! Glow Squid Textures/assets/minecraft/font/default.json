@@ -1,0 +1,22 @@
+{
+	"providers": [
+		{
+			"type": "bitmap",
+			"file": "minecraft:font/air.png",
+			"ascent": -16,
+			"height": 8,
+			"chars": [
+				"\uEff1"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:font/air_empty.png",
+			"ascent": -16,
+			"height": 8,
+			"chars": [
+				"\uEff2"
+			]
+		}
+	]
+}
