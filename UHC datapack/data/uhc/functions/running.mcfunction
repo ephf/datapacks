@@ -108,7 +108,7 @@ function uhc:pvptimeset
 ## player count on scoreboard
 
 scoreboard players set count players 0
-#execute as @a[team=alive] run scoreboard players add count players 1
+execute as @a[team=alive] run scoreboard players add count players 1
 function uhc:playercount
 
 execute if score count players matches 1 at @a[team=alive] run summon firework_rocket ~ ~ ~ {LifeTime:15,FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;1973019,11743532,3887386,5320730,2437522,8073150,2651799,11250603,4408131,14188952,4312372,14602026,6719955,12801229,15435844,15790320],FadeColors:[I;1973019,11743532,3887386,5320730,2437522,8073150,2651799,11250603,4408131,14188952,4312372,14602026,6719955,12801229,15435844,15790320]}]}}}}
