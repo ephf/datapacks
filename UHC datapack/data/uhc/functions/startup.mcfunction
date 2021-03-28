@@ -5,7 +5,7 @@ kill @e[type=item]
 time set day
 scoreboard players set @a dead 0
 scoreboard players set @a kills 0
-tag @s remove struck
+tag @a remove struck
 gamemode survival @a
 worldborder set 4000 0
 scoreboard players set uhcstarted bools 1

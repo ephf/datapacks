@@ -1,0 +1,19 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+      "###",
+      "#0#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:gold_ingot"
+      },
+      "0": {
+        "item": "minecraft:player_head"
+      }
+    },
+    "result": {
+      "item": "minecraft:knowledge_book"
+    }
+}

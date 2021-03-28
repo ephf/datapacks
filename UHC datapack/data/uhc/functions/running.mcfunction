@@ -69,9 +69,32 @@ execute as @e[type=item] at @s if data entity @s Item{id:"minecraft:lapis_lazuli
 
 execute at @a[tag=!struck,scores={dead=1..}] run summon lightning_bolt ~ 0 ~
 execute as @a[tag=!struck,scores={dead=1..}] at @a run playsound entity.lightning_bolt.thunder block @s
+execute as @a[tag=!struck,scores={dead=1..}] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1,tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}}
 execute as @a[tag=!struck,scores={dead=1..}] run tag @s add struck
 execute as @a[scores={dead=1..}] run gamemode spectator
 execute as @a[scores={dead=1..}] run team join dead
+
+## player heads
+
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=ghead,distance=..1] if data entity @e[type=armor_stand,tag=ghead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}}] run effect give @s regeneration 5 1
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=ghead,distance=..1] if data entity @e[type=armor_stand,tag=ghead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}}] run effect give @s speed 25 0
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=ghead,distance=..1] if data entity @e[type=armor_stand,tag=ghead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}}] run effect give @s absorption 30 1
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=ghead,distance=..1] if data entity @e[type=armor_stand,tag=ghead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}}] run playsound minecraft:entity.player.burp block @s
+execute as @a at @s positioned ^ ^1 ^1 as @e[type=armor_stand,tag=ghead,distance=..1] if data entity @s ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}}] run kill @s
+execute as @a at @s positioned ^ ^1 ^1 unless data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}} run kill @e[type=armor_stand,tag=ghead,distance=..1.5]
+execute as @a at @s positioned ^ ^1 ^1 if data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}} unless entity @e[type=armor_stand,tag=ghead,distance=..1.5] run summon armor_stand ~ ~ ~ {Tags:['ghead'],Invisible:1,Invulnerable:1}
+execute as @a at @s positioned ^ ^1 ^1 if data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Golden Head","color":"gold","italic":false}'}}} run tp @e[type=armor_stand,tag=ghead,limit=1,sort=nearest] ~ ~ ~ facing entity @s
+
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=phead,distance=..1] if data entity @e[type=armor_stand,tag=phead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}] run effect give @s regeneration 5 0
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=phead,distance=..1] if data entity @e[type=armor_stand,tag=phead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}] run effect give @s speed 15 0
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=phead,distance=..1] if data entity @e[type=armor_stand,tag=phead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}] run effect give @s absorption 25 0
+execute as @a at @s positioned ^ ^1 ^1 if entity @e[type=armor_stand,tag=phead,distance=..1] if data entity @e[type=armor_stand,tag=phead,distance=..1,limit=1] ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}] run playsound minecraft:entity.player.burp block @s
+execute as @a at @s positioned ^ ^1 ^1 as @e[type=armor_stand,tag=phead,distance=..1] if data entity @s ArmorItems[{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}}] run kill @s
+execute as @a at @s positioned ^ ^1 ^1 unless data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}} run kill @e[type=armor_stand,tag=phead,distance=..1.5]
+execute as @a at @s positioned ^ ^1 ^1 if data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}} unless entity @e[type=armor_stand,tag=phead,distance=..1.5] run summon armor_stand ~ ~ ~ {Tags:['phead'],Invisible:1,Invulnerable:1}
+execute as @a at @s positioned ^ ^1 ^1 if data entity @s SelectedItem{id:"minecraft:player_head",tag:{display:{Name:'{"text":"Player Head","color":"red","italic":false}'}}} run tp @e[type=armor_stand,tag=phead,limit=1,sort=nearest] ~ ~ ~ facing entity @s
+
+clear @a knowledge_book
 
 ## kills
 
@@ -85,7 +108,7 @@ function uhc:pvptimeset
 ## player count on scoreboard
 
 scoreboard players set count players 0
-execute as @a[team=alive] run scoreboard players add count players 1
+#execute as @a[team=alive] run scoreboard players add count players 1
 function uhc:playercount
 
 execute if score count players matches 1 at @a[team=alive] run summon firework_rocket ~ ~ ~ {LifeTime:15,FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;1973019,11743532,3887386,5320730,2437522,8073150,2651799,11250603,4408131,14188952,4312372,14602026,6719955,12801229,15435844,15790320],FadeColors:[I;1973019,11743532,3887386,5320730,2437522,8073150,2651799,11250603,4408131,14188952,4312372,14602026,6719955,12801229,15435844,15790320]}]}}}}

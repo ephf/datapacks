@@ -12,6 +12,8 @@ scoreboard players set minutes graceperiod 0
 scoreboard players set endingticks graceperiod 100
 scoreboard objectives add kills playerKillCount
 scoreboard objectives add dead deathCount
+scoreboard objectives add end trigger
+scoreboard players set @a end 0
 
 ## sidebar
 
