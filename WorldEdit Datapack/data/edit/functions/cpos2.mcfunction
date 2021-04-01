@@ -1,0 +1,8 @@
+execute at @s positioned ^ ^ ^4 unless entity @e[type=armor_stand,tag=pos2,distance=..1.5] run summon armor_stand ~ ~1 ~ {Tags:['pos2'],ShowArms:1,Invisible:1}
+execute at @s positioned ^ ^ ^4 if entity @e[type=armor_stand,tag=pos2,distance=..1.5] run tp @e[type=armor_stand,tag=pos2,distance=..1.5] ~ ~1 ~ facing entity @s
+execute at @s positioned ^ ^ ^4 if data entity @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] HandItems[0].tag{Wand:1} store result score @s pos2x run data get storage raycast pos.one[0]
+execute at @s positioned ^ ^ ^4 if data entity @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] HandItems[0].tag{Wand:1} store result score @s pos2y run data get storage raycast pos.one[1]
+execute at @s positioned ^ ^ ^4 if data entity @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] HandItems[0].tag{Wand:1} store result score @s pos2z run data get storage raycast pos.one[2]
+execute at @s positioned ^ ^ ^4 if data entity @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] HandItems[0].tag{Wand:1} run function edit:reset
+execute at @s positioned ^ ^ ^4 if data entity @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] HandItems[0].tag{Wand:1} run tellraw @s [{"text":"Second position set to (","color":"light_purple"},{"score":{"name":"@s","objective":"pos2x"},"color":"light_purple"},{"text":", ","color":"light_purple"},{"score":{"name":"@s","objective":"pos2y"}},{"text":", ","color":"light_purple"},{"score":{"name":"@s","objective":"pos2z"}},{"text":")","color":"light_purple"}]
+execute at @s positioned ^ ^ ^4 as @e[type=armor_stand,tag=pos2,distance=..1.5,limit=1,sort=nearest] if data entity @s HandItems[0].tag{Wand:1} run kill @s
