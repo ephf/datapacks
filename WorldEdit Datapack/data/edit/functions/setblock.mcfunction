@@ -739,3 +739,4 @@ execute if data storage raycast block{two:"minecraft:potted_crimson_fungus"} run
 execute if data storage raycast block{two:"minecraft:potted_warped_fungus"} run setblock ~ ~ ~ minecraft:potted_warped_fungus
 execute if data storage raycast block{two:"minecraft:potted_crimson_roots"} run setblock ~ ~ ~ minecraft:potted_crimson_roots
 execute if data storage raycast block{two:"minecraft:potted_warped_roots"} run setblock ~ ~ ~ minecraft:potted_warped_roots
+function edit:reset
