@@ -1,2 +1,0 @@
-execute at @s positioned ^ ^ ^4 unless data entity @s SelectedItem.tag{Wand:1} as @e[type=armor_stand,tag=pos2,distance=..1.5] run kill @s
-execute unless data entity @s SelectedItem.tag{Wand:1} run function edit:reset
