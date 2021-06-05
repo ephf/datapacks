@@ -1,0 +1,2 @@
+execute if score @s slimeballcount = @s slimeballcounta run function boss:crafted/compact_slimeshard
+execute unless score @s slimeballcount = @s slimeballcounta run function boss:crafted/failed/compact_slimeshard

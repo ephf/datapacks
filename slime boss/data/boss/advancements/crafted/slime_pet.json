@@ -1,0 +1,15 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "boss:slime_pet"
+      }
+    }
+  },
+  "requirements": [["crafted"]],
+  "rewards": {
+    "function": "boss:crafted/check/slime_pet"
+  }
+}

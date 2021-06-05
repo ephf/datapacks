@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["sss", "sgs", "sss"],
+  "key": {
+    "s": {
+      "item": "minecraft:slime_block"
+    },
+    "g": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "minecraft:knowledge_book",
+    "count": 1
+  }
+}

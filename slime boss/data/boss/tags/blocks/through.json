@@ -1,0 +1,15 @@
+{
+  "values": [
+    "lava",
+    "water",
+    "air",
+    "#buttons",
+    "lever",
+    "#crops",
+    "#pressure_plates",
+    "chest",
+    "trapped_chest",
+    "ender_chest",
+    "#rails"
+  ]
+}
