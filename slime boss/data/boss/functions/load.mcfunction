@@ -33,3 +33,6 @@ scoreboard objectives add holdingsummonto dummy
 scoreboard objectives add petout dummy
 
 scoreboard objectives add ptrack dummy
+
+execute unless score init slimeboss matches 1 run schedule function boss:init 5s
+scoreboard players set init slimeboss 1

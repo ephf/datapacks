@@ -50,7 +50,7 @@ execute as @a[scores={petout=1}] at @s run function boss:events/pet/out
 scoreboard players set @a holdingsummonto 1
 execute as @a if data entity @s SelectedItem{id:"minecraft:zombie_horse_spawn_egg",tag:{display:{Name:'{"text":"Baby Slime","italic":false}'},Enchantments:[{}],EntityTag:{id:"minecraft:slime",Size:0,Tags:["slimepetsummon"],DeathLootTable:"minecraft:empty"}}} run scoreboard players set @s holdingsummonto 0
 
-execute as @a[scores={effectlevel=1}] run function boss:effect/lvl1
-execute as @a[scores={effectlevel=2}] run function boss:effect/lvl2
-execute as @a[scores={effectlevel=3..,petout=0}] run function boss:effect/lvl3
-execute as @a[scores={effectlevel=3..,petout=1}] run function boss:effect/lvl4
+execute as @a[scores={effectlevel=1}] if score effect slimeboss matches 1 run function boss:effect/lvl1
+execute as @a[scores={effectlevel=2}] if score effect slimeboss matches 1 run function boss:effect/lvl2
+execute as @a[scores={effectlevel=3..,petout=0}] if score effect slimeboss matches 1 run function boss:effect/lvl3
+execute as @a[scores={effectlevel=3..,petout=1}] if score effect slimeboss matches 1 run function boss:effect/lvl4

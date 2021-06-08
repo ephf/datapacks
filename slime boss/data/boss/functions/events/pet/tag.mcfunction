@@ -1,3 +1,2 @@
-tag @e[type=slime,limit=1,sort=nearest] add slimepet
-scoreboard players operation @e[type=slime,limit=1,sort=nearest] ptrack = @s ptrack
+tp @e[type=slime,limit=1,sort=nearest] ~ -70 ~
 scoreboard players set @s petout 1
