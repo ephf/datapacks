@@ -1,3 +1,0 @@
-execute store result score @s summoncount run clear @s slime_spawn_egg{EntityTag:{Size:25,Tags:["bosssummon"],CustomName:'{"text":"Lord Bounce"}'},display:{Name:'{"text": "Slime Charm", "color": "green", "italic": false}',Lore:['{"text":"Used to summon Lord Bounce", "color": "gray"}']},Enchantments:[{}]} 0
-execute store result score @s spawneggcount run clear @s slime_spawn_egg 0
-scoreboard players operation @s spawneggcount -= @s summoncount

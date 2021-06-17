@@ -1,4 +1,0 @@
-execute as @e[type=slime,limit=1,sort=nearest] unless data entity @s Passengers[{id:"minecraft:armor_stand"}] run data modify entity @e[type=slime,limit=1,sort=nearest] Passengers set value [{id:"minecraft:armor_stand",Small:1b,Tags:["slimepet_texture"],Invulnerable:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:knowledge_book",Count:1b,tag:{CustomModelData:1000}}]}]
-execute as @e[type=armor_stand,tag=slimepet_texture] run data modify entity @s Rotation set from entity @e[type=slime,limit=1,sort=nearest] Rotation
-execute as @e[type=armor_stand,tag=slimepet_texture] at @s unless entity @e[type=slime,tag=slimepet,distance=..1] run kill @s
-effect give @e[type=slime,limit=1,sort=nearest] invisibility 1 0 true

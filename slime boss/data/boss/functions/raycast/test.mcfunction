@@ -1,1 +1,0 @@
-execute unless block ~ ~ ~ crafting_table run function #boss:material

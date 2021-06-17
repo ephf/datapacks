@@ -1,5 +1,0 @@
-execute if score @s spawneggcount = @s spawneggcounta if score @s emeraldcount = @s emeraldcounta run function boss:crafted/slime_pet
-execute unless score @s spawneggcount = @s spawneggcounta run function boss:crafted/failed/slime_pet/slime_spawn_egg
-execute unless score @s emeraldcount = @s emeraldcounta run function boss:crafted/failed/slime_pet/emerald
-execute if score @s spawneggcount = @s spawneggcounta unless score @s emeraldcount = @s emeraldcounta run give @s slime_spawn_egg{EntityTag:{Size:25,Tags:["bosssummon"],CustomName:'{"text":"Lord Bounce"}'},display:{Name:'{"text": "Slime Charm", "color": "green", "italic": false}',Lore:['{"text":"Used to summon Lord Bounce", "color": "gray"}']},Enchantments:[{}]}
-execute unless score @s spawneggcount = @s spawneggcounta if score @s emeraldcount = @s emeraldcounta run give @s emerald{Enchantments:[{}],display:{Name:'{"text": "Compact Slime Shard", "italic": false}'}} 4
