@@ -1,0 +1,3 @@
+execute as @e[type=armor_stand,tag=wr.tune] if score @s wr.block_id = @e[limit=1,sort=nearest,type=armor_stand] wr.block_id run function wr:inc_tune
+execute as @s[tag=wr.tune] run data modify entity @s ArmorItems[3] set value {id:"minecraft:iron_block",Count:1b,tag:{wr_id:"decoration"}}
+execute as @s[tag=!wr.tune] run data modify entity @s ArmorItems[3] set value {id:"minecraft:redstone_torch",Count:1b,tag:{wr_id:"decoration"}}

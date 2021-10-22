@@ -1,0 +1,1 @@
+execute as @s[tag=!wr.placed] run function wr:receiver/placed
