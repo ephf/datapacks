@@ -1,0 +1,228 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1000,
+          "name": "minecraft:air"
+        },
+        {
+          "type": "item",
+          "weight": 300,
+          "name": "minecraft:rotten_flesh"
+        },
+        {
+          "type": "item",
+          "weight": 400,
+          "name": "minecraft:seagrass"
+        },
+        {
+          "type": "item",
+          "weight": 100,
+          "name": "minecraft:glass_bottle"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "name": "minecraft:potion"
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "minecraft:glass"
+        },
+        {
+          "type": "item",
+          "weight": 300,
+          "name": "minecraft:stick"
+        },
+        {
+          "type": "item",
+          "weight": 90,
+          "name": "minecraft:dead_bush"
+        },
+        {
+          "type": "item",
+          "weight": 40,
+          "name": "minecraft:glass_pane"
+        },
+        {
+          "type": "item",
+          "weight": 200,
+          "name": "minecraft:lily_pad"
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "minecraft:wooden_sword",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 0.9
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 0.99
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:fishing_rod",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 2,
+                "max": 5
+              }
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.7
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 300,
+          "name": "minecraft:dirt"
+        },
+        {
+          "type": "item",
+          "weight": 50,
+          "name": "minecraft:oak_log"
+        },
+        {
+          "type": "item",
+          "weight": 100,
+          "name": "minecraft:oak_planks"
+        },
+        {
+          "type": "item",
+          "weight": 100,
+          "name": "minecraft:dried_kelp_block",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Bag of Garbage\",\"italic\":false}'}}"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 100,
+          "name": "minecraft:oak_leaves"
+        },
+        {
+          "type": "item",
+          "weight": 90,
+          "name": "minecraft:sea_pickle"
+        },
+        {
+          "type": "item",
+          "weight": 200,
+          "name": "minecraft:kelp"
+        },
+        {
+          "type": "item",
+          "weight": 50,
+          "name": "minecraft:flower_pot"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "name": "minecraft:item_frame"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:oak_boat"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:conduit"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:scute"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:raw_gold"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "name": "minecraft:bowl"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:axolotl_bucket"
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:heart_of_the_sea"
+        },
+        {
+          "type": "item",
+          "weight": 50,
+          "name": "minecraft:wooden_hoe",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.6,
+                "max": 0.99
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
